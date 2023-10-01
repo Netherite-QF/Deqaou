@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "deqaou",
+  "version": "${version}",
+  "name": "Deqaou",
+  "description": "",
+  "accessWidener": "deqaou.accesswidener",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/deqaou/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.netheriteqf.deqaou.client.DQODataGen"
+    ],
+    "client": [
+      "com.netheriteqf.deqaou.client.DeqaouClient"
+    ],
+    "main": [
+      "com.netheriteqf.deqaou.Deqaou"
+    ]
+  },
+  "mixins": [
+    "deqaou.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "*"
+  }
+}
