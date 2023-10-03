@@ -1,0 +1,8 @@
+{
+    "variants": {
+      "facing=north": { "model": "deqaou:block/obsidian_crucible", "uvlock": true },
+      "facing=east":  { "model": "deqaou:block/obsidian_crucible", "y":  90, "uvlock": true },
+      "facing=south": { "model": "deqaou:block/obsidian_crucible", "y": 180, "uvlock": true },
+      "facing=west":  { "model": "deqaou:block/obsidian_crucible", "y": 270, "uvlock": true }
+    }
+  }
