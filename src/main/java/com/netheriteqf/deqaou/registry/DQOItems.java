@@ -2,6 +2,7 @@ package com.netheriteqf.deqaou.registry;
 
 import com.netheriteqf.deqaou.Deqaou;
 import com.netheriteqf.deqaou.item.EvilGogglesItem;
+import com.netheriteqf.deqaou.item.StaffItem;
 import com.netheriteqf.deqaou.item.SweetGolveItem;
 import io.wispforest.owo.itemgroup.OwoItemSettings;
 import io.wispforest.owo.registration.reflect.ItemRegistryContainer;
@@ -19,4 +20,5 @@ public class DQOItems implements ItemRegistryContainer {
     public static final Item HAPOUNDIUM = new Item(new OwoItemSettings().group(Deqaou.DEQAOU_TAB).rarity(SPIRITLY));
     public static final Item PITOCKIUM = new Item(new OwoItemSettings().group(Deqaou.DEQAOU_TAB).rarity(SPIRITLY));
     public static final Item SADANTIUM = new Item(new OwoItemSettings().group(Deqaou.DEQAOU_TAB).rarity(SPIRITLY));
+    public static final Item PRIMARY_CANE = new StaffItem(new OwoItemSettings().group(Deqaou.DEQAOU_TAB).rarity(Rarity.RARE));
 }

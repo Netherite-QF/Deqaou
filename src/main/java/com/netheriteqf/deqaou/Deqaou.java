@@ -24,5 +24,6 @@ public class Deqaou implements ModInitializer {
         FieldRegistrationHandler.register(DQOItems.class, MODID, false);
         FieldRegistrationHandler.register(DQOBlocks.class, MODID, false);
         FieldRegistrationHandler.register(DQOBlockEntity.class, MODID, false);
+        FieldRegistrationHandler.register(DQOEntities.class, MODID, false);
     }
 }

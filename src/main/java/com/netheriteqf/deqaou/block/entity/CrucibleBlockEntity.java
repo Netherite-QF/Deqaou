@@ -1,11 +1,12 @@
 package com.netheriteqf.deqaou.block.entity;
 
 import com.google.common.collect.Lists;
+import com.lowdragmc.lowdraglib.side.fluid.FluidStack;
 import com.netheriteqf.deqaou.registry.DQOBlockEntity;
-import dev.architectury.fluid.FluidStack;
 import io.wispforest.owo.util.ImplementedInventory;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;

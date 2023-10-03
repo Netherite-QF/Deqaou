@@ -27,10 +27,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Stack;
 
 public class CrucibleBlock extends Block implements BlockEntityProvider {
-//    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
     public CrucibleBlock(Settings settings) {
         super(settings);
-//        setDefaultState(getDefaultState().with(FACING, Direction.NORTH));
     }
 
     @Nullable
@@ -60,10 +58,10 @@ public class CrucibleBlock extends Block implements BlockEntityProvider {
             } else {
                 if (hand != Hand.OFF_HAND) {
                     BucketItem bucket = (BucketItem) player.getHandItems();
-                    FluidStack fluid = ;
+                    FluidStack fluid = crucible.getTopFluid();
                     if (bucket.fluid == Fluids.EMPTY) {
                         player.getMainHandStack().decrement(1);
-                        player.dropItem(fluid.getFluid().getBucketItem());
+                        player.dropItem();
                         crucible.markDirty();
                         return ActionResult.CONSUME;
                     } else {
@@ -87,6 +85,6 @@ public class CrucibleBlock extends Block implements BlockEntityProvider {
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext ctx) {
-        return VoxelShapes.cuboid(0, 0, 0, 16, 14.0 / 16, 16);
+        return VoxelShapes.cuboid(0, 0, 0, 1, 14.0 / 16, 1);
     }
 }

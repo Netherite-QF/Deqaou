@@ -49,6 +49,10 @@ repositories {
         name = "Ladysnake Libs"
         url = 'https://maven.ladysnake.org/releases'
     }
+    maven {
+        name = 'GeckoLib'
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
 }
 
 dependencies {
@@ -60,8 +64,8 @@ dependencies {
         // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    modImplementation("com.lowdragmc.photon:photon-fabric-1.20.1:1.0.5") { transitive = false }
-    modImplementation("com.lowdragmc.ldlib:ldlib-fabric-1.20.1:1.0.13") { transitive = false }
+    modImplementation("com.lowdragmc.photon:photon-fabric-1.20.1:1.0.7") { transitive = false }
+    modImplementation("com.lowdragmc.ldlib:ldlib-fabric-1.20.1:1.0.19.d") { transitive = false }
     modCompileOnly "dev.emi:emi-fabric:${emi_version}:api"
     modLocalRuntime "dev.emi:emi-fabric:${emi_version}"
     modImplementation("dev.kosmx.player-anim:player-animation-lib-fabric:${project.player_anim}")
@@ -71,7 +75,9 @@ dependencies {
     modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}")
     modApi("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}")
     modImplementation "maven.modrinth:Revelationary:${project.revelationary_version}"
-//    modImplementation "maven.modrinth:modonomicon:${project.modonomicon}"
+    modCompileOnly("maven.modrinth:architectury-api:${project.arch_ver}")
+    modImplementation "maven.modrinth:modonomicon:${project.modonomicon}"
+    modImplementation 'software.bernie.geckolib:geckolib-fabric-1.20.1:4.2.2'
 }
 
 processResources {
