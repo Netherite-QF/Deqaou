@@ -78,6 +78,8 @@ dependencies {
     modCompileOnly("maven.modrinth:architectury-api:${project.arch_ver}")
     modImplementation "maven.modrinth:modonomicon:${project.modonomicon}"
     modImplementation 'software.bernie.geckolib:geckolib-fabric-1.20.1:4.2.2'
+    modImplementation "org.ladysnake:satin:${satin_version}"
+    include "org.ladysnake:satin:${satin_version}"
 }
 
 processResources {

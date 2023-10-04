@@ -49,7 +49,7 @@ public class CrucibleBlock extends Block implements BlockEntityProvider {
                     return ActionResult.CONSUME;
                 } else if (!player.getMainHandStack().isEmpty() && !player.isSneaking()) {
                     player.getMainHandStack().decrement(1);
-                    crucible.setStack(, player.getMainHandStack());
+//                    crucible.setStack(, player.getMainHandStack());
                     crucible.markDirty();
                     return ActionResult.SUCCESS;
                 } else {
@@ -58,10 +58,10 @@ public class CrucibleBlock extends Block implements BlockEntityProvider {
             } else {
                 if (hand != Hand.OFF_HAND) {
                     BucketItem bucket = (BucketItem) player.getHandItems();
-                    FluidStack fluid = crucible.getTopFluid();
+//                    FluidStack fluid = crucible.getTopFluid();
                     if (bucket.fluid == Fluids.EMPTY) {
                         player.getMainHandStack().decrement(1);
-                        player.dropItem();
+//                        player.dropItem();
                         crucible.markDirty();
                         return ActionResult.CONSUME;
                     } else {

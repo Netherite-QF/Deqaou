@@ -8,6 +8,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.world.World;
 
 public class StaffItem extends Item {
+    public static boolean holding;
     public StaffItem(Settings settings) {
         super(settings);
     }
@@ -18,7 +19,7 @@ public class StaffItem extends Item {
         if (entity instanceof PlayerEntity player) {
             Item holdingItem = player.getStackInHand(Hand.MAIN_HAND).getItem();
             if (holdingItem instanceof StaffItem) {
-                //TODO render Mana Bar HUD
+                holding = true;
             }
         }
     }

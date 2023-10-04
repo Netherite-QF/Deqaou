@@ -18,11 +18,12 @@ public abstract class ItemEntityMixin {
     @Inject(method = "tick", at = @At("HEAD"))
     private void changeInto(CallbackInfo ci) {
         ItemEntity itemEntity = (ItemEntity) (Object) this;
-        MagicalItemEntity newItem = new MagicalItemEntity(DQOEntities.MAGICAL_ITEM, itemEntity.getWorld());
-        if (itemEntity.getStack().getItem() instanceof MagicalItem) {
-            newItem.setStack(itemEntity.getStack());
-            itemEntity.getWorld().spawnEntity(newItem);
+        if (itemEntity.getStack().getItem() instanceof MagicalItem && !(itemEntity instanceof MagicalItemEntity)) {
             itemEntity.discard();
+            MagicalItemEntity newItem = new MagicalItemEntity(itemEntity.getWorld(), itemEntity.getX(), itemEntity.getY(), itemEntity.getZ(), itemEntity.getStack());
+            newItem.setToDefaultPickupDelay();
+            newItem.move();
+            itemEntity.getWorld().spawnEntity(newItem);
         }
     }
 }
