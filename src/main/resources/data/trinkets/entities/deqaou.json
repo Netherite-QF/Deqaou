@@ -3,6 +3,18 @@
       "player"
     ],
     "slots": [
-      "head/face"
+      "head/face",
+      "hand/glove",
+      "offhand/glove",
+      "head/hat",
+      "hand/ring",
+      "offhand/ring",
+      "feet/aglet",
+      "feet/shoes",
+      "legs/belt",
+      "chest/back",
+      "chest/cape",
+      "chest/necklace",
+      "hand/hat"
     ]
   }

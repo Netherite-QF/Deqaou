@@ -1,0 +1,20 @@
+{
+  "background": "modonomicon:textures/gui/dark_slate_seamless.png",
+  "background_height": 512,
+  "background_parallax_layers": [
+    {
+      "background": "deqaou:textures/gui/parallax/flow/base.png",
+      "speed": 0.7
+    },
+    {
+      "background": "deqaou:textures/gui/parallax/flow/layer.png",
+      "speed": 1.0
+    }
+  ],
+  "background_width": 512,
+  "entry_textures": "modonomicon:textures/gui/entry_textures.png",
+  "icon": "deqaou:sweet_glove",
+  "name": "book.modonomicon.demo.features.name",
+  "show_category_button": true,
+  "sort_number": 1
+}

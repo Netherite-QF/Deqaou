@@ -16,6 +16,7 @@ public class ManaBarHud {
 
     public static void renderMainBar(DrawContext context, MinecraftClient client, PlayerEntity player) {
         RenderSystem.setShaderColor(1.0f, 1.0f, 1.0f, 1.0f);
-        context.drawTexture(MANA_BAR_TEXTURE, 0, 0, 0, 0, 256, 62);
+
+        context.drawTexture(MANA_BAR_TEXTURE, 0, 0, 0, 0, 128, 31, 128, 128);
     }
 }

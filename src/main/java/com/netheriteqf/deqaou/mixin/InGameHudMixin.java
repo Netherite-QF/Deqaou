@@ -33,8 +33,6 @@ public abstract class InGameHudMixin {
     @Inject(method = "render", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/gui/hud/InGameHud;renderHotbar(FLnet/minecraft/client/gui/DrawContext;)V"))
     private void renderManaBar(DrawContext context, float tickDelta, CallbackInfo ci) {
         PlayerEntity player = client.player;
-        int scaledWidth = client.getWindow().getScaledWidth();
-        int scaledHeight = client.getWindow().getScaledHeight();
         if (player != null && player.getMainHandStack().getItem() instanceof StaffItem) {
             for (int nowY = 0; nowY < 66; nowY =  nowY + 2) {
                 enteringY = nowY;

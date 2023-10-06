@@ -1,5 +1,3 @@
 {
-    "parent": {
-        "model": "deqaou:block/obsidian_crucible"
-    }
+    "parent": "deqaou:block/obsidian_crucible"
 }
